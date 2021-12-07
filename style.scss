@@ -1,0 +1,17 @@
+#board {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+}
+
+.boxes {
+    vertical-align: middle;
+    line-height: 100px;
+    text-align: center;
+    font-size: 2rem;
+    border: 2px solid black;
+}
+
+.win {
+    color:red
+}
