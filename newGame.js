@@ -66,31 +66,48 @@ const computerMode = () => {
   turnOptionComputer.classList.remove('invisible')
 }
 
-const xFirstPlayer = () => {
+const callPlayer = (
+  gameContainer,
+  turnOptionPlayer,
+  assignedMode,
+  enableEventListener
+) => {
   gameContainer.classList.remove('invisible')
   turnOptionPlayer.classList.add('invisible')
-  mode = 'x-first-player'
-  enableFirstEventListener()
+  mode = assignedMode
+  enableEventListener()
 }
-const oFirstPlayer = () => {
-  gameContainer.classList.remove('invisible')
-  turnOptionPlayer.classList.add('invisible')
-  mode = 'o-first-player'
-  enableSecondEventListener()
-}
+const xFirstPlayer = () =>
+  callPlayer(
+    gameContainer,
+    turnOptionPlayer,
+    'x-first-player',
+    enableFirstEventListener
+  )
 
-const xFirstComputer = () => {
-  gameContainer.classList.remove('invisible')
-  turnOptionComputer.classList.add('invisible')
-  mode = 'x-first-computer'
-  enableEventListeners()
-}
-const oFirstComputer = () => {
-  gameContainer.classList.remove('invisible')
-  turnOptionComputer.classList.add('invisible')
-  mode = 'o-first-computer'
-  opponentTurn()
-}
+const oFirstPlayer = () =>
+  callPlayer(
+    gameContainer,
+    turnOptionPlayer,
+    'o-first-player',
+    enableSecondEventListener
+  )
+
+const xFirstComputer = () =>
+  callPlayer(
+    gameContainer,
+    turnOptionComputer,
+    'x-first-computer',
+    enableEventListeners
+  )
+
+const oFirstComputer = () =>
+  callPlayer(
+    gameContainer,
+    turnOptionComputer,
+    'o-first-computer',
+    opponentTurn
+  )
 
 playerModeBtn.addEventListener('click', playerMode)
 computerModeBtn.addEventListener('click', computerMode)
