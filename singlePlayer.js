@@ -36,7 +36,7 @@ export const myTurn = (event) => {
     opponentTurn()
   } else {
     winDisplay.classList.remove('invisible')
-    winDisplay.innerText = 'O wins'
+    winDisplay.innerText = 'X wins'
     hideWin()
     yourScore++
     yourScoreBoard.innerText = yourScore
