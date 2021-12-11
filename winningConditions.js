@@ -42,6 +42,7 @@ export const checkForVictory = () => {
   })
 
   if (emptyBoxes().length === 0) {
+    showHistoryBtn.classList.remove('invisible')
     winDisplay.classList.remove('invisible')
     winDisplay.innerText = 'DRAW'
     hideWin()
