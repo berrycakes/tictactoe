@@ -1,4 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap");
+@font-face {
+  font-family: squidgame;
+  src: url(./GameOfSquids-1GMVL.ttf);
+}
+body {
+  font-family: squidgame;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 3rem;
+  font-family: "Readex Pro", sans-serif;
+}
+
+span {
+  font-family: squidgame;
+  color: gray;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+#game {
+  width: 95vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
 #board {
+  justify-self: center;
   display: grid;
   grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
@@ -8,12 +68,153 @@
   vertical-align: middle;
   line-height: 100px;
   text-align: center;
-  font-size: 2rem;
-  border: 2px solid black;
+  font-size: 3rem;
+  border: 3px solid gray;
+}
+
+#box0,
+#box1,
+#box2 {
+  border-top: none;
+}
+
+#box6,
+#box7,
+#box8 {
+  border-bottom: none;
+}
+
+#box0,
+#box3,
+#box6 {
+  border-left: none;
+}
+
+#box2,
+#box5,
+#box8 {
+  border-right: none;
+}
+
+.x {
+  color: black;
 }
 
 .win {
   color: red;
+}
+
+button {
+  font-family: "Readex Pro", sans-serif;
+  background-color: transparent;
+  padding: 10px;
+}
+
+#button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#mode-option,
+#turn-option-player,
+#turn-option-computer,
+#history-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.invisible {
+  display: none !important;
+}
+
+.reload {
+  color: black;
+}
+
+.button-option {
+  width: 150px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  margin: 0;
+  margin-top: 10px;
+  font-family: "Readex Pro", sans-serif;
+  text-align: center;
+}
+
+nav {
+  width: 95vw;
+}
+
+.fa,
+.far {
+  color: white;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+}
+.fa:hover,
+.far:hover {
+  opacity: 0.7;
+  animation: reload 0.6s ease-in-out both;
+}
+@keyframes reload {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.fa:visited,
+.far:visited {
+  text-decoration: none;
+}
+
+.fa-gamepad {
+  background-color: navy;
+}
+
+.fa-redo,
+.fa-circle,
+.fa-forward {
+  background-color: green;
+}
+
+.fa-times {
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: red;
+}
+
+.fa-backward {
+  background-color: red;
+}
+
+.fa-history {
+  background-color: gray;
+}
+
+.win-display {
+  width: 100vw;
+  opacity: 0.9;
+  position: absolute;
+  top: 235px;
+  padding: 30px;
+  font-size: 3rem;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

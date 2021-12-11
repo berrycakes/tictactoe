@@ -5,34 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <h1>Tic  Tac Toe</h1>
-    <!-- <section id="board">
-        <input type="text" class="boxes" id="box1">
-        <input type="text" class="boxes" id="box2">
-        <input type="text" class="boxes" id="box3">
-        <input type="text" class="boxes" id="box4">
-        <input type="text" class="boxes" id="box5">
-        <input type="text" class="boxes" id="box6">
-        <input type="text" class="boxes" id="box7">
-        <input type="text" class="boxes" id="box8">
-        <input type="text" class="boxes" id="box9">
-    </section> -->
-    <div id="board">
-        <div class="boxes" id="box1"></div>
-        <div class="boxes" id="box2"></div>
-        <div class="boxes" id="box3"></div>
-        <div class="boxes" id="box4"></div>
-        <div class="boxes" id="box5"></div>
-        <div class="boxes" id="box6"></div>
-        <div class="boxes" id="box7"></div>
-        <div class="boxes" id="box8"></div>
-        <div class="boxes" id="box9"></div>
-    </div>
-
     
+    <h1> TIC  TAC TOe</h1>
+
+    <main>
+        <div class="win-display invisible"></div>
+        <div id="game-container">
+            <div id="game">
+                <div>
+                    <h2><span>x</span> player</h2>
+                    <h3 class="your-score"></h3>
+                </div>
+                
+                <div id="board">
+                    <div class="boxes" id="box0"></div>
+                    <div class="boxes" id="box1"></div>
+                    <div class="boxes" id="box2"></div>
+                    <div class="boxes" id="box3"></div>
+                    <div class="boxes" id="box4"></div>
+                    <div class="boxes" id="box5"></div>
+                    <div class="boxes" id="box6"></div>
+                    <div class="boxes" id="box7"></div>
+                    <div class="boxes" id="box8"></div>
+                </div>
+                <div>
+                    <h2><span>o</span> player</h2>
+                    <h3 class="opponent-score"></h3>
+                </div>
+            </div>
+            <div id="button-container">
+                <div class="button-option new-game">
+                    <a href="#" class="fa fa-gamepad "></a>
+                    <h4>new game</h4>
+                </div>
+                
+                <div class="button-option show-history invisible">
+                    <a href="#" class="fa fa-history "></a>
+                    <h4>show history</h4>
+                </div>
+                <div id="history-container">
+                    <div class="button-option previous invisible">
+                        <a href="#" class="fa fa-backward "></a>
+                        <h4>previous turn</h4>
+                    </div>
+                    <div class="button-option next invisible">
+                        <a href="#" class="fa fa-forward "></a>
+                        <h4>next turn</h4>
+                    </div>
+                </div>
+                               
+            </div>
+            
+            <div class="button-option">
+                <a href="#" class="fa fa-redo"></a>
+                <h4>change </br> game mode</h4>
+            </div>
+            
+        </div>
+
+        <div id="game-mode-container">
+            <div id="mode-option">
+                <div class="button-option">
+                    <a href="#" class="fa fa-times player-mode"></a>
+                    <h4>play against </br> fellow human</h4>
+                </div>
+                <div class="button-option">
+                    <a href="#" class="far fa-circle computer-mode"></a>
+                    <h4>play against </br>  AI</h4>
+                </div>
+            </div>
+            <div id="turn-option-player">
+                <div class="button-option">
+                    <a href="#" class="fa fa-times x-first-player"></a>
+                    <h4>x plays first </h4>
+                </div>
+                <div class="button-option">
+                    <a href="#" class="far fa-circle o-first-player"></a>
+                    <h4>o plays first</h4>
+                </div> 
+            </div>
+            <div id="turn-option-computer">
+                <div class="button-option">
+                    <a href="#" class="fa fa-times x-first-computer"></a>
+                    <h4>you play first </h4>
+                </div>
+                <div class="button-option">
+                    <a href="#" class="far fa-circle o-first-computer"></a>
+                    <h4>computer plays first</h4>
+                </div>   
+            </div>
+        </div>
+    </main>
 </body>
-<script src="index.js" type="module"></script>
+<script src="main.js" type="module"></script>
 </html>
