@@ -44,7 +44,7 @@ export const myTurn = (event) => {
 }
 
 const opponentChoice = () =>
-  boxId(emptyBoxes()[Math.floor(Math.random() * emptyBoxes.length)])
+  boxId(emptyBoxes()[Math.floor(Math.random() * emptyBoxes().length)])
 
 export const opponentTurn = () => {
   disableEventListener()

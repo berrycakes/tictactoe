@@ -1,5 +1,4 @@
 import { loadGame } from './newGame.js'
-import { showHistory } from './showHistory.js'
 
 onload = () => {
   loadGame()

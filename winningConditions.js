@@ -28,7 +28,7 @@ const endGame = (winningSequence) => {
   winningSequence.forEach((boxElement) => boxElement.classList.add('win'))
 }
 
-const checkForVictory = () => {
+export const checkForVictory = () => {
   let victory = false
 
   winningCombos.forEach((combo) => {
@@ -41,7 +41,15 @@ const checkForVictory = () => {
     }
   })
 
-  return victory
+  if (emptyBoxes().length === 0) {
+    winDisplay.classList.remove('invisible')
+    winDisplay.innerText = 'DRAW'
+    hideWin()
+  } else {
+    return victory
+  }
 }
 
-export { checkForVictory }
+const winDisplay = document.querySelector('.win-display')
+const hideWinDisplay = () => winDisplay.classList.add('invisible')
+const hideWin = () => winDisplay.addEventListener('click', hideWinDisplay)
